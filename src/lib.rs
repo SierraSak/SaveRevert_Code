@@ -128,6 +128,8 @@ pub fn main() {
         unitaccessorylist_get_count,
         unitaccessorylist_ctor_hook
     );
+
+    //Patches the length of UnitAccessoryList in it's ctor function.  This is necessary in order to properly load an edited save.
     skyline::patching::Patch::in_text(0x01f61c00).bytes(&[0x01, 0x02, 0x80, 0x52]).expect("Couldn’t patch that shit for some reasons");
 
 }
