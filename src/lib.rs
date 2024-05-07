@@ -108,7 +108,7 @@ pub fn main() {
         // Note the \0 at the end. This is needed because show_error is a C function and expects a C string.
         // This is actually just a result of bad old code and shouldn't be necessary most of the time.
         let err_msg = format!(
-            "Custom plugin has panicked at '{}' with the following message:\n{}\0",
+            "SaveRevert has panicked at '{}' with the following message:\n{}\0",
             location,
             msg
         );
